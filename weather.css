@@ -3,14 +3,42 @@
 /* General Styles */
 body {
     background: linear-gradient(to right, #74ebd5, #acb6e5);
-    font-family: 'Arial', sans-serif;
+    font-family: "Roboto", sans-serif;
     text-align: center;
-    height: 100vh;
+    padding-top: 10%;
+    padding-bottom: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
     animation: backgroundPulse 8s infinite alternate ease-in-out;
 }
+
+.forecast-container {
+    display: none;
+    gap: 30px;
+    margin-top: 20px;
+    padding: 20px;
+    overflow: scroll;
+    width: 100%;
+    max-width: 900px;
+    border: px solid rgba(255, 255, 255, 0.2);
+}
+
+.forecast-container::-webkit-scrollbar {
+    display: none;
+}
+
+.day {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    animation: slideIn 1s ease-in-out;
+}
+
+
 
 /* Background Pulse Animation */
 @keyframes backgroundPulse {
@@ -29,9 +57,10 @@ body {
     border-radius: 15px;
     padding: 30px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    max-width: 500px;
+    max-width: 900px;
     width: 100%;
     animation: slideIn 1s ease-in-out;
+    border: px solid;
 }
 
 /* Slide-in Animation */
@@ -90,6 +119,8 @@ body {
     margin-top: 20px;
     color: white;
     animation: fadeIn 1.5s ease-in-out;
+    border: px solid;
+    
 }
 
 /* Fade-in Animation */
@@ -109,6 +140,14 @@ h1 {
     animation: fadeIn 1.5s ease-in-out 0.5s forwards;
 }
 
+h2 {
+    color: #18245a;
+    margin-bottom: 5px;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out 0.7s forwards;
+    
+}
+
 h3 {
     font-size: 24px;
     margin-bottom: 5px;
@@ -124,14 +163,17 @@ p {
 }
 
 /* Weather Icon */
-.icon {
-    display: none;
+.icon, .forecast-icon {
     width: 120px;
     height: 120px;
     margin: 10px auto;
     object-fit: fill;
     aspect-ratio: 1/1;
     animation: bounce 2s infinite alternate ease-in-out;
+}
+
+.icon {
+    display: none;
 }
 
 /* Bouncing Weather Icon */
@@ -172,6 +214,12 @@ p {
     }
     .input {
         width: 60%;
+    }
+
+    .forecast-container {
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
     }
 }
 

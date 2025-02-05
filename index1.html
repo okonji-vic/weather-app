@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+    <!-- <script src="js/jquery-3.6.0.min.js"></script> -->
+    <script src="weather.js" defer></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="weather.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row mt-5">
+        <div class="form">
+          <input
+            type="text"
+            class="form-control-inline input col-xs-12 col-sm-10 col-md-9 col-lg-7"
+            id="city"
+            placeholder="Enter City Name"
+          />
+          
+          <button class="btn btn-primary col-md-2 col-lg-1" id="submit">
+
+            <i class="fas fa-search"></i>
+          </button>
+          
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 offset-md-3 weather-div">
+            <p id="error" class="text-danger"></p>
+          <h1 id="city-name"></h1>
+          <h3 id="temp"></h3>
+          <h3 id="desc"></h3>
+          <!-- <p id="weather"></p> -->
+          <img src="" id="icon" class="icon" />
+          <!-- <img src="" id="weather-image" /> -->
+        </div>
+        
+      </div>
+    </div>
+  </body>
+</html>
